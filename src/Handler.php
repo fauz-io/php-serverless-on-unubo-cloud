@@ -13,6 +13,7 @@ class Handler
      * @return
      */
     public function handle($data) {
-        return index;
+        $x = (include 'index.php');
+        return $x;
     }
 }
