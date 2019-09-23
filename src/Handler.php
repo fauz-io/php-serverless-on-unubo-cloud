@@ -12,7 +12,7 @@ class Handler
      * @param $data
      * @return
      */
-    <?php
+
 /*
  * Converts CSV to JSON
  * Example uses Google Spreadsheet CSV feed
@@ -61,5 +61,5 @@ for ($j = 0; $j < $count; $j++) {
 }
 // Print it out as JSON
 echo json_encode($newArray);
-?>
+
 }
