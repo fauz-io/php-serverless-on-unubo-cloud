@@ -13,12 +13,8 @@ class Handler
      * @return
      */
 
-/*
- * Converts CSV to JSON
- * Example uses Google Spreadsheet CSV feed
- * csvToArray function I think I found on php.net
- */
-header('Content-type: application/json');
+public function handle($data) {
+        header('Content-type: application/json');
 // Set your CSV feed
 $feed = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSmqL4GeUW0-H3TzWNuJsPRmKmVYzO1zOvOwZjAtg0gJwZwThlQs3KOiNxGLUxVA54N_kqkOShEP19u/pub?gid=0&single=true&output=csv';
 // Arrays we'll use later
@@ -62,4 +58,5 @@ for ($j = 0; $j < $count; $j++) {
 // Print it out as JSON
 echo json_encode($newArray);
 
+    }
 }
