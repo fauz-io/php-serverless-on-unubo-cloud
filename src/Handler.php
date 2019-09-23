@@ -16,8 +16,8 @@ class Handler
 public function handle($data) {
         header('Content-type: application/json');
 // Set your CSV feed
-$data = $_GET['data'];
-$feed = 'https://docs.google.com/spreadsheets/d/e/' . $data . '/pub?gid=0&single=true&output=csv';
+$urli = $_GET['urli'];
+$feed = 'https://docs.google.com/spreadsheets/d/e/' . $urli . '/pub?gid=0&single=true&output=csv';
 // Arrays we'll use later
 $keys = array();
 $newArray = array();
