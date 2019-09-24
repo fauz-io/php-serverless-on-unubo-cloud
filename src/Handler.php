@@ -13,10 +13,10 @@ class Handler
      * @return
      */
 
-public function handle($data) {
-        header('Content-type: application/json');
+header('Content-type: application/json');
+header('Access-Control-Allow-Origin: *');
 // Set your CSV feed
-$feed = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSmqL4GeUW0-H3TzWNuJsPRmKmVYzO1zOvOwZjAtg0gJwZwThlQs3KOiNxGLUxVA54N_kqkOShEP19u/pub?gid=0&single=true&output=csv';
+$feed = 'https://docs.google.com/spreadsheets/d/e/'. $_GET['link'] .'/pub?gid=0&single=true&output=csv';
 // Arrays we'll use later
 $keys = array();
 $newArray = array();
@@ -57,6 +57,5 @@ for ($j = 0; $j < $count; $j++) {
 }
 // Print it out as JSON
 echo json_encode($newArray);
-
-    }
+    
 }
