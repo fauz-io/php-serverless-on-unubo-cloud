@@ -12,7 +12,7 @@ class Handler
      * @param $data
      * @return
      */
-
+public function handle(){
 header('Content-type: application/json');
 header('Access-Control-Allow-Origin: *');
 // Set your CSV feed
@@ -57,5 +57,5 @@ for ($j = 0; $j < $count; $j++) {
 }
 // Print it out as JSON
 echo json_encode($newArray);
-    
+}
 }
